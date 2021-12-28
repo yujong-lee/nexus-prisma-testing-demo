@@ -1,0 +1,25 @@
+{
+  "name": "nexus-prisma-testing-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --transpile-only --no-notify api/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dooboo/eslint-config-svelte": "^0.0.7",
+    "apollo-server": "^3.5.0",
+    "eslint": "^8.5.0",
+    "graphql": "^15.8.0",
+    "nexus": "^1.1.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
