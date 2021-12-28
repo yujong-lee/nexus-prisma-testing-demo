@@ -4,9 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --transpile-only --no-notify api/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "generate": "ts-node --transpile-only api/schema",
+    "test": "npm run generate && jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": { "warnOnly": true }
+      }
+    },
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +29,11 @@
     "nexus": "^1.1.0"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "get-port": "^5.1.1",
+    "graphql-request": "^3.7.0",
+    "jest": "^27.4.5",
+    "ts-jest": "^27.1.2",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.4"
   }
